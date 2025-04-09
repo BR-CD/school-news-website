@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./Images/10.png" alt="School news logo">
+        </div>
+        <div class="header-right">
+            <ul>
+                <li><a href="">ALL</a></li>
+                <li><a href="">Local news</a></li>
+                <li><a href="">Sports</a></li>
+                <li><a href="">Entertainment</a></li>
+                <li><a href="">School Announcemnt</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sliding-news">
+        <div class="slider">
+      
+            <div class="slides" id="slides">
+                <div class="slide">
+<img src="./Images/10.png" alt="">
+     <div class="content">
+        <p><a href=""> ipsum dolor sit amet consectetur adipisicing <br> elit. Dicta fugiat eaque <br>laboriosam aliquam in quos libero animi possimus,<br> temporibus, ipsum ad magni quibusdam! <br> Fugit debitis necessitatibus expedita magni repellat doloremque.</a></p>
+     </div>
+                </div>
+                <div class="slide">
+<img src="./Images/10.png" alt="">
+<p><a href="">Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Dicta fugiat eaque <br>laboriosam aliquam in quos libero animi possimus,<br> temporibus, ipsum ad magni quibusdam! <br> Fugit debitis necessitatibus expedita magni repellat doloremque.</a></p>
+                </div>
+            </div>
+            <button class="nav right" onclick="moveSlide(1)">&#10095; </button>
+        </div>
+        <div class="main-content">
+           
+        </div>
+    </div>
+    <script>
+        let currentIndexs = 0;
+        function moveSlide(direction) {
+            const slides = document.getElementById('slides');
+            const totalSlides = slides.children.length;
+
+            currentIndexs += direction;
+
+            if (currentIndexs < 0) {
+                currentIndexs = totalSlides - 1;  
+            }
+            if (currentIndexs >= totalSlides) {
+                currentIndexs = 0; 
+            }
+
+            slides.style.transform = `translateX(-${currentIndexs * 100}%)`;
+        }
+
+       
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000); 
+    </script>
+</body>
+</html>
