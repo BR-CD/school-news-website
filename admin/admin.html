@@ -3,9 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/tilt-prism" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/equine" rel="stylesheet">
+    <style>
+        body{
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    overflow-y: auto;
+    position: relative;
+}
+
+ul {
+  list-style: none;
+}
+a, a:hover, a:focus, a:visited {
+    display: inline-block;
+    text-decoration: none;
+}
+a {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/*CONTENTS CSS */
+.container {
+    display: flex;
+    display: -webkit-flex;
+    padding-left: 200px;
+    transition: 0.5s;
+}
+.container.is-click {
+    padding-left: 0;
+}
+.avatar {
+    margin: 50px 1em;
+    position: relative;
+    display: table;
+}
+.avatar img {
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.avatarName{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 1em;
+    color: #fff;
+    font-size: 1.7em;
+    font-family: 'Tilt Prism', sans-serif;
+    line-height: 1.5;
+}
+
+
+/* SIDE CSS */
+.sideArea {
+    width: 18%;
+    min-width: 200px;
+    background-color: rgb(2, 88, 2);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.container.is-click .sideArea {
+    left: -200px;
+}
+.sideArea li>a {
+    display: block;
+    color: #fff;
+    font-size: 1.3em;
+    padding: 1em;
+    font-family: 'Tilt Prism', sans-serif;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.sideArea li>a:hover {
+    background: rgba(255,255,255,0.1);
+}
+.sideArea li>a>.fa {
+    width: 1em;
+    text-align: center;
+    margin-right: 10px;
+}
+.submenu {
+    display: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.submenu li>a {
+    padding-left: 2em;
+    border-bottom: none;
+}
+.sideMenu {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+/*upload part*/
+.main-content{
+    margin-left: 17em;
+}
+.main-content h1{
+    padding-left: 10em;
+    color: #fff;
+    font-size: 3em;
+    padding-top: 1em;
+    font-family: 'Equine', sans-serif;
+                                                
+}
+.all_container{
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 1em;
+    height:50em;
+    width: 80%;
+    margin-left: 7em;
+    margin-bottom: 3em;
+}
+.home{
+    margin-left: 5em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.last_two{
+    margin-left: 5em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+.home img{
+margin: 10em;
+}
+.one{
+    margin-left: 27em;
+}
+.category {
+    background: rgba(82, 231, 95, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+
+}
+    </style>
     <title>Admin panel</title>
 </head>
 <body>
-    
+<div class="container">
+        <div class="sideArea">
+            <div class="avatar">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNOdyoIXDDBztO_GC8MFLmG_p6lZ2lTDh1ZnxSDawl1TZY_Zw" alt="">
+                <div class="avatarName">Welcome,<br>Media club</div>
+            </div>
+            <ul class="sideMenu">
+                <h2>Uplaod</h2>
+                <li><a href="">Local news</a></li>
+                <li><a href="">Sports</a></li>
+                <li><a href="">entertainment</a></li>
+                <li><a href="">Announcement</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="main-content">
+          
 </body>
 </html>
