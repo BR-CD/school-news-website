@@ -37,23 +37,32 @@
                 <h3>Give an announcement</h3>
                 </div>
                 <div class="announce-all">
+                  <form method="post" action="send.php">
                     <div class="announce-content">
+                      
+                      <label for="title">Title</label>
+                      <input name="title" type="text" style="width: 100%; padding: 6px; border-radius: 5px; background-color: #2c2c2c; color: white; border: 1px solid #444; margin-bottom: 10px;" > 
                       <p>Write to your students what you want to share today *</p>
-                      <textarea rows="6" placeholder="Write your announcement here..."></textarea>
+                      <textarea rows="6" placeholder="Write your announcement here..." name="content"></textarea>
                     </div>
                   
                     <div class="announce-file">
-                      <p>Upload a file</p>
-                      <input type="file" id="fileInput">
+                      <label for="files"> File</label>
+                      <input type="file" id="fileInput" name="files">
                       <div class="file-preview" id="filePreview">No file uploaded yet.</div>
                     </div>
                     <div class="by">
-                        <p>Announcement by:</p>
+                        <label for="updated_by">Announcement by:</label>
                         <div class="by-name">
-                            <input type="text" placeholder="Enter your name" style="width: 100%; padding: 10px; border-radius: 5px; background-color: #2c2c2c; color: white; border: 1px solid #444;">
-                    </div>
+                            <input type="text" placeholder="Enter your name" style="width: 100%; padding: 6px; border-radius: 5px; background-color: #2c2c2c; color: white; border: 1px solid #444; margin-bottom: 2em;" name="updated_by">
+                             </div>
+                             <div class="tim">
+                            <label name="created_at">Time Updated</label>
+                             <input type="datetime-local" name="created_at" step="1" style="width: 100%; padding: 6px; border-radius: 5px; background-color: #2c2c2c; color: white; border: 1px solid #444;margin-bottom: 2em;">
+                          </div>
                   </div>
                   <button  class="announce-btn" type="submit">Announce</button>
+                  </form>
                 </div>
             </div>
             <script>
